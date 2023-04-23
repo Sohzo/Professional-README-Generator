@@ -43,3 +43,7 @@
   * [Github](https://github.com/Sohzo)
   * Please email me with any questions at jonpw2004@outlook.com
 
+  ## Credits
+
+  Some pieces of code were inspired using forums such as Stack Overflow and Youtube videos.
+
