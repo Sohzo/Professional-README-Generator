@@ -35,9 +35,10 @@ const questions = [
         message: 'What are the testing instructions for this project?',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'What license would you like to use for this project?',
+        choices: ['mit', 'GPL', 'BY', 'no license']
     },
     {
         type: 'input',
@@ -60,7 +61,11 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then(function (userinput) {
+        writeToFile("README.md", generateMarkdown(userinput));
+    });
+};
 
 // Function call to initialize app
 init();
